@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- file path is absolute starts from public -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <title>home</title>
+</head>
+<body>
+    <div class="main-content">
+
+
+    <!-- accessing data passed as object to render method -->
+     <!-- <h1>{{title}}</h1> -->
+
+    {{!-- accessing header partial --}}
+        {{>header}}
+        <p>Use this site to get your weather!</p>
+
+        <form>
+            <input placeholder="Location"/>
+            <button>Search</button>
+        </form>
+        <p id="msg"></p>
+    </div>
+
+    {{>footer}}
+
+    <script src="js/index.js"></script>
+</body>
+</html>
+<!-- index.html from public directory has been renamed to index1.html after creating its dynamoc version using hbs -->
+<!-- so that out home page served from views folder(templates) not as static asset from public -->
