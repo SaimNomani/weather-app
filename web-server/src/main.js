@@ -196,6 +196,10 @@ console.log(publicDirPath);
 
 const app = express();
 
+const port=process.env.PORT || 3000
+//process.env.PORT: for production
+// 3000: for local dev
+
 app.set("view engine", "hbs");
 
 const viewsDirPath = path.join(__dirname, "../../templates/views");
@@ -291,7 +295,7 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+app.listen(port, () => {
+  console.log(`Server is running on ${port}`);
 });
 // lecture 9 on public/js/index.js
